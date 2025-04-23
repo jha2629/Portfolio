@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for anchor links
+document.addEventListener('DOMContentLoaded', function() {  
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
                 
-                // Update active nav link
                 document.querySelectorAll('nav ul li a').forEach(link => {
                     link.classList.remove('active');
                 });
@@ -22,8 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Highlight active nav link on scroll
+
     window.addEventListener('scroll', function() {
         const scrollPosition = window.scrollY;
         
@@ -43,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add glitch effect to elements with glitch class
     const glitchElements = document.querySelectorAll('.glitch');
     glitchElements.forEach(element => {
         element.addEventListener('mouseenter', function() {
@@ -55,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    
-    // Add animated code background
     const codeBg = document.querySelector('.code-bg');
     if (codeBg) {
         const characters = '01';

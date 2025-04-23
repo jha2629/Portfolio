@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhared Zamora | Portfolio Website</title>
+    <title>Jhared Zamora| Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,7 +12,7 @@
     <div class="glitch-bg"></div>
     
     <header>
-        <div class="logo glitch" data-text="My Portfolio">My Porfolio.</div>
+        <div class="logo glitch" data-text="MY WEBSITE">MY Porfolio.</div>
         <nav>
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
@@ -138,20 +138,24 @@
                       
                     </div>
                 </div>
-                <form class="contact-form">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email Address" required>
-                    </div> 
-                    <div class="form-group">
-                        <input type="text" placeholder="Subject">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Professional Inquiry" required></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Send Message</button>
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="bb9b73ab-eb44-418e-bd0c-c480cb9cfd18">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <input type="text" name="name" placeholder="NAME" class="form-group" required>
+                    <input type="email" name="email" placeholder="EMAIL ADDRESS" class="form-group" required>
+                    <textarea type="text" name="message" class="form-group" placeholder="MESSAGE" required></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <!-- Custom Confirmation / Success Page -->
+                    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                
+                    <button type="submit" class="cta-button">Submit Form</button>
+                </div>
                 </form>
             </div>
         </section>
